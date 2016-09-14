@@ -140,18 +140,18 @@ public class WorldGuardHandler {
         region.setPriority(100);
         if (uSkyBlock.getInstance().getConfig().getBoolean("worldguard.entry-message", true)) {
             if (owners.size() == 0) {
-                region.setFlag(DefaultFlag.GREET_MESSAGE, tr("\u00a74** You are entering a protected - but abandoned - island area."));
+                region.setFlag(DefaultFlag.GREET_MESSAGE, tr("\u00a74** Vstupujes do chranene ale debilem opustene oblasti."));
             } else {
-                region.setFlag(DefaultFlag.GREET_MESSAGE, tr("\u00a7d** You are entering \u00a7b{0}''s \u00a7disland.", islandConfig.getLeader()));
+                region.setFlag(DefaultFlag.GREET_MESSAGE, tr("\u00a7d** Vstupujes na posranej ostrov hrace \u00a7b{0}' \u00a7d..", islandConfig.getLeader()));
             }
         } else {
             region.setFlag(DefaultFlag.GREET_MESSAGE, null);
         }
         if (uSkyBlock.getInstance().getConfig().getBoolean("worldguard.exit-message", true)) {
             if (owners.size() == 0) {
-                region.setFlag(DefaultFlag.FAREWELL_MESSAGE, tr("\u00a74** You are leaving an abandoned island."));
+                region.setFlag(DefaultFlag.FAREWELL_MESSAGE, tr("\u00a74** Opoustis debilem opustenej ostrov."));
             } else {
-                region.setFlag(DefaultFlag.FAREWELL_MESSAGE, tr("\u00a7d** You are leaving \u00a7b{0}''s \u00a7disland.", islandConfig.getLeader()));
+                region.setFlag(DefaultFlag.FAREWELL_MESSAGE, tr("\u00a7d** Opoustis posranej \u00a7b{0}''s \u00a7dostrov.", islandConfig.getLeader()));
             }
         } else {
             region.setFlag(DefaultFlag.FAREWELL_MESSAGE, null);
